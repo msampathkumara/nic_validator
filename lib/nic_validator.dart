@@ -1,13 +1,16 @@
 library nic_validator;
 
-import 'dart:convert';
-
 class Validators {
   static bool validateNic(value) {
-    // RegExp regex = new RegExp(r'^(?=(.{9}[vVxX]|.{11}[0-9]))(?=((?:19|20)?\d{2}(?:[0-35-8]\d\d(?!(?:000|500|36[7-9]|3[7-9]\d|86[7-9]|8[7-9]\d)))\d{4}(?:[xXvV0-9]))).*$');
-    RegExp regex = RegExp(r'^(?=(.{9}[vVxX]|.{11}[0-9]))(?=((?:19|20)?\d{2}(?:[0-35-8]\d\d(?!(?:000|500|36[7-9]|[7-9]\d|86[7-9]|8[7-9]\d)))\d{4}(?:[xXvV0-9]))).*$');
-    // 775173769
-    return regex.hasMatch(value);
+    if (value.length == 12) {
+      RegExp regex = RegExp(r'^(?=((?:19|20)?\d{2}(?:[0-35-8]\d\d(?!(?:000|500|36[7-9]|[7-9]\d|86[7-9]|8[7-9]\d)))\d{5})).*$');
+      return regex.hasMatch(value);
+    }
+    if (value.length == 10) {
+      RegExp regex = RegExp(r'^(1[0-9]|[2-9][0-9])(?:[0-35-8]\d\d(?!(?:000|500|36[7-9]|[7-9]\d|86[7-9]|8[7-9]\d)))(.{4}[vVxX])$');
+      return regex.hasMatch(value);
+    }
+    return false;
   }
 
   static String? LkPhone(value) {

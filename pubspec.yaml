@@ -1,7 +1,8 @@
 name: nic_validator
 description: Validate Sri Lankan National Identity Card Number
-version: 0.0.1
-homepage:
+version: 0.0.2
+homepage: 'https://github.com/msampathkumara/nic_validator'
+repository: 'https://github.com/msampathkumara/nic_validator'
 
 environment:
   sdk: '>=3.0.3 <4.0.0'
