@@ -23,8 +23,6 @@ Validate Sri Lankan National Identity Card Number
 
 ## Usage
 
- 
-
 ```dart
 bool isValid= Validators.validateNic();
 ```
