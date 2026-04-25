@@ -1,7 +1,7 @@
 name: nic_validator
 description: A Flutter package to validate Sri Lankan National Identity Card (NIC) numbers. Supports both the new 12-digit format and the old 10-digit format (ending with V/X).
 
-version: 0.1.1
+version: 0.2.0
 homepage: 'https://github.com/msampathkumara/nic_validator'
 repository: 'https://github.com/msampathkumara/nic_validator'
 
@@ -16,5 +16,5 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
 
